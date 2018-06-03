@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC6420C3BD7000D19FDA /* AppDelegate.m */; };
+		2258FC6820C3BD7000D19FDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC6720C3BD7000D19FDA /* ViewController.m */; };
+		2258FC6B20C3BD7000D19FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC6920C3BD7000D19FDA /* Main.storyboard */; };
+		2258FC6D20C3BD7100D19FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC6C20C3BD7100D19FDA /* Assets.xcassets */; };
+		2258FC7020C3BD7100D19FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC6E20C3BD7100D19FDA /* LaunchScreen.storyboard */; };
+		2258FC7320C3BD7100D19FDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC7220C3BD7100D19FDA /* main.m */; };
+		2258FC7D20C3BD7100D19FDA /* chaipenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC7C20C3BD7100D19FDA /* chaipenTests.m */; };
+		2258FC8820C3BD7100D19FDA /* chaipenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC8720C3BD7100D19FDA /* chaipenUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2258FC7920C3BD7100D19FDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2258FC5820C3BD7000D19FDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2258FC5F20C3BD7000D19FDA;
+			remoteInfo = chaipen;
+		};
+		2258FC8420C3BD7100D19FDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2258FC5820C3BD7000D19FDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2258FC5F20C3BD7000D19FDA;
+			remoteInfo = chaipen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2258FC6020C3BD7000D19FDA /* chaipen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaipen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2258FC6320C3BD7000D19FDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2258FC6420C3BD7000D19FDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2258FC6620C3BD7000D19FDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2258FC6720C3BD7000D19FDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2258FC6A20C3BD7000D19FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2258FC6C20C3BD7100D19FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2258FC6F20C3BD7100D19FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2258FC7120C3BD7100D19FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2258FC7220C3BD7100D19FDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2258FC7820C3BD7100D19FDA /* chaipenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaipenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2258FC7C20C3BD7100D19FDA /* chaipenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaipenTests.m; sourceTree = "<group>"; };
+		2258FC7E20C3BD7100D19FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2258FC8320C3BD7100D19FDA /* chaipenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaipenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2258FC8720C3BD7100D19FDA /* chaipenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaipenUITests.m; sourceTree = "<group>"; };
+		2258FC8920C3BD7100D19FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2258FC5D20C3BD7000D19FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC7520C3BD7100D19FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC8020C3BD7100D19FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2258FC5720C3BD7000D19FDA = {
+			isa = PBXGroup;
+			children = (
+				2258FC6220C3BD7000D19FDA /* chaipen */,
+				2258FC7B20C3BD7100D19FDA /* chaipenTests */,
+				2258FC8620C3BD7100D19FDA /* chaipenUITests */,
+				2258FC6120C3BD7000D19FDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2258FC6120C3BD7000D19FDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2258FC6020C3BD7000D19FDA /* chaipen.app */,
+				2258FC7820C3BD7100D19FDA /* chaipenTests.xctest */,
+				2258FC8320C3BD7100D19FDA /* chaipenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2258FC6220C3BD7000D19FDA /* chaipen */ = {
+			isa = PBXGroup;
+			children = (
+				2258FC6320C3BD7000D19FDA /* AppDelegate.h */,
+				2258FC6420C3BD7000D19FDA /* AppDelegate.m */,
+				2258FC6620C3BD7000D19FDA /* ViewController.h */,
+				2258FC6720C3BD7000D19FDA /* ViewController.m */,
+				2258FC6920C3BD7000D19FDA /* Main.storyboard */,
+				2258FC6C20C3BD7100D19FDA /* Assets.xcassets */,
+				2258FC6E20C3BD7100D19FDA /* LaunchScreen.storyboard */,
+				2258FC7120C3BD7100D19FDA /* Info.plist */,
+				2258FC7220C3BD7100D19FDA /* main.m */,
+			);
+			path = chaipen;
+			sourceTree = "<group>";
+		};
+		2258FC7B20C3BD7100D19FDA /* chaipenTests */ = {
+			isa = PBXGroup;
+			children = (
+				2258FC7C20C3BD7100D19FDA /* chaipenTests.m */,
+				2258FC7E20C3BD7100D19FDA /* Info.plist */,
+			);
+			path = chaipenTests;
+			sourceTree = "<group>";
+		};
+		2258FC8620C3BD7100D19FDA /* chaipenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2258FC8720C3BD7100D19FDA /* chaipenUITests.m */,
+				2258FC8920C3BD7100D19FDA /* Info.plist */,
+			);
+			path = chaipenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2258FC5F20C3BD7000D19FDA /* chaipen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2258FC8C20C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipen" */;
+			buildPhases = (
+				2258FC5C20C3BD7000D19FDA /* Sources */,
+				2258FC5D20C3BD7000D19FDA /* Frameworks */,
+				2258FC5E20C3BD7000D19FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chaipen;
+			productName = chaipen;
+			productReference = 2258FC6020C3BD7000D19FDA /* chaipen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2258FC7720C3BD7100D19FDA /* chaipenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2258FC8F20C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipenTests" */;
+			buildPhases = (
+				2258FC7420C3BD7100D19FDA /* Sources */,
+				2258FC7520C3BD7100D19FDA /* Frameworks */,
+				2258FC7620C3BD7100D19FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2258FC7A20C3BD7100D19FDA /* PBXTargetDependency */,
+			);
+			name = chaipenTests;
+			productName = chaipenTests;
+			productReference = 2258FC7820C3BD7100D19FDA /* chaipenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2258FC8220C3BD7100D19FDA /* chaipenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2258FC9220C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipenUITests" */;
+			buildPhases = (
+				2258FC7F20C3BD7100D19FDA /* Sources */,
+				2258FC8020C3BD7100D19FDA /* Frameworks */,
+				2258FC8120C3BD7100D19FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2258FC8520C3BD7100D19FDA /* PBXTargetDependency */,
+			);
+			name = chaipenUITests;
+			productName = chaipenUITests;
+			productReference = 2258FC8320C3BD7100D19FDA /* chaipenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2258FC5820C3BD7000D19FDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = cjworkx;
+				TargetAttributes = {
+					2258FC5F20C3BD7000D19FDA = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					2258FC7720C3BD7100D19FDA = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2258FC5F20C3BD7000D19FDA;
+					};
+					2258FC8220C3BD7100D19FDA = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2258FC5F20C3BD7000D19FDA;
+					};
+				};
+			};
+			buildConfigurationList = 2258FC5B20C3BD7000D19FDA /* Build configuration list for PBXProject "chaipen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2258FC5720C3BD7000D19FDA;
+			productRefGroup = 2258FC6120C3BD7000D19FDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2258FC5F20C3BD7000D19FDA /* chaipen */,
+				2258FC7720C3BD7100D19FDA /* chaipenTests */,
+				2258FC8220C3BD7100D19FDA /* chaipenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2258FC5E20C3BD7000D19FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2258FC7020C3BD7100D19FDA /* LaunchScreen.storyboard in Resources */,
+				2258FC6D20C3BD7100D19FDA /* Assets.xcassets in Resources */,
+				2258FC6B20C3BD7000D19FDA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC7620C3BD7100D19FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC8120C3BD7100D19FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2258FC5C20C3BD7000D19FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2258FC6820C3BD7000D19FDA /* ViewController.m in Sources */,
+				2258FC7320C3BD7100D19FDA /* main.m in Sources */,
+				2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC7420C3BD7100D19FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2258FC7D20C3BD7100D19FDA /* chaipenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2258FC7F20C3BD7100D19FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2258FC8820C3BD7100D19FDA /* chaipenUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2258FC7A20C3BD7100D19FDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2258FC5F20C3BD7000D19FDA /* chaipen */;
+			targetProxy = 2258FC7920C3BD7100D19FDA /* PBXContainerItemProxy */;
+		};
+		2258FC8520C3BD7100D19FDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2258FC5F20C3BD7000D19FDA /* chaipen */;
+			targetProxy = 2258FC8420C3BD7100D19FDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2258FC6920C3BD7000D19FDA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2258FC6A20C3BD7000D19FDA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2258FC6E20C3BD7100D19FDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2258FC6F20C3BD7100D19FDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2258FC8A20C3BD7100D19FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2258FC8B20C3BD7100D19FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2258FC8D20C3BD7100D19FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2258FC8E20C3BD7100D19FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2258FC9020C3BD7100D19FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaipen.app/chaipen";
+			};
+			name = Debug;
+		};
+		2258FC9120C3BD7100D19FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaipen.app/chaipen";
+			};
+			name = Release;
+		};
+		2258FC9320C3BD7100D19FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chaipen;
+			};
+			name = Debug;
+		};
+		2258FC9420C3BD7100D19FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chaipenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chaipen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2258FC5B20C3BD7000D19FDA /* Build configuration list for PBXProject "chaipen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2258FC8A20C3BD7100D19FDA /* Debug */,
+				2258FC8B20C3BD7100D19FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2258FC8C20C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2258FC8D20C3BD7100D19FDA /* Debug */,
+				2258FC8E20C3BD7100D19FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2258FC8F20C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2258FC9020C3BD7100D19FDA /* Debug */,
+				2258FC9120C3BD7100D19FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2258FC9220C3BD7100D19FDA /* Build configuration list for PBXNativeTarget "chaipenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2258FC9320C3BD7100D19FDA /* Debug */,
+				2258FC9420C3BD7100D19FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2258FC5820C3BD7000D19FDA /* Project object */;
+}
