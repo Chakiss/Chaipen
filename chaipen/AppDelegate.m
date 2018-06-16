@@ -23,16 +23,14 @@
     [FIRApp configure];
     
     if ([FIRAuth auth].currentUser) {
-        // User is signed in.
-        // ...
+    
         NSLog(@"User is signed in.");
     
         UITabBarController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
         self.window.rootViewController = onboardingViewController;
         
     } else {
-        // No user is signed in.
-        // ...
+    
         NSLog(@"No user is signed in.");
     
         OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
