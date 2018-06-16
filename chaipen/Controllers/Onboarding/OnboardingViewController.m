@@ -8,6 +8,8 @@
 
 #import "OnboardingViewController.h"
 
+@import Firebase;
+
 @interface OnboardingViewController ()
 
 @end
@@ -17,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

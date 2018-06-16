@@ -34,6 +34,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>KrungthaiFast-Italic.ttf</string>
+		<string>KrungthaiFast-Light.ttf</string>
+		<string>KrungthaiFast-Bold.ttf</string>
+		<string>KrungthaiFast-BoldItalic.ttf</string>
+		<string>KrungthaiFast-LightItalic.ttf</string>
+		<string>KrungthaiFast-Regular.ttf</string>
+		<string>KrungthaiFast-UltraLight.ttf</string>
+		<string>KrungthaiFast-UltraLightItalic.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

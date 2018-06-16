@@ -17,6 +17,14 @@
 		2258FC9620C3BDEF00D19FDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC9520C3BDEF00D19FDA /* GoogleService-Info.plist */; };
 		2298C1CD20D2C5FA009A1E99 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2298C1CC20D2C5FA009A1E99 /* OnboardingViewController.m */; };
 		2298C1D120D2D3FD009A1E99 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2298C1D020D2D3FD009A1E99 /* ArticleViewController.m */; };
+		22FD5D5420D4C7C200CE9373 /* KrungthaiFast-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D4C20D4C7C200CE9373 /* KrungthaiFast-Italic.ttf */; };
+		22FD5D5520D4C7C200CE9373 /* KrungthaiFast-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D4D20D4C7C200CE9373 /* KrungthaiFast-Bold.ttf */; };
+		22FD5D5620D4C7C200CE9373 /* KrungthaiFast-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D4E20D4C7C200CE9373 /* KrungthaiFast-LightItalic.ttf */; };
+		22FD5D5720D4C7C200CE9373 /* KrungthaiFast-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D4F20D4C7C200CE9373 /* KrungthaiFast-UltraLight.ttf */; };
+		22FD5D5820D4C7C200CE9373 /* KrungthaiFast-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D5020D4C7C200CE9373 /* KrungthaiFast-BoldItalic.ttf */; };
+		22FD5D5920D4C7C200CE9373 /* KrungthaiFast-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D5120D4C7C200CE9373 /* KrungthaiFast-Light.ttf */; };
+		22FD5D5A20D4C7C200CE9373 /* KrungthaiFast-UltraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D5220D4C7C200CE9373 /* KrungthaiFast-UltraLightItalic.ttf */; };
+		22FD5D5B20D4C7C200CE9373 /* KrungthaiFast-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D5320D4C7C200CE9373 /* KrungthaiFast-Regular.ttf */; };
 		3C22D02DA7215F2281AC0E0A /* libPods-chaipenUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA4A7D0E44E42CB1E4583D5 /* libPods-chaipenUITests.a */; };
 		67CE817B9AF7484AC7360D5B /* libPods-chaipenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D5782A7CBE3F0CC1D937DB /* libPods-chaipenTests.a */; };
 		AB1AF101D6155304EA645A72 /* libPods-chaipen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE28D91A0C428FC6F7447C7C /* libPods-chaipen.a */; };
@@ -60,6 +68,14 @@
 		2298C1CC20D2C5FA009A1E99 /* OnboardingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		2298C1CF20D2D3FD009A1E99 /* ArticleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		2298C1D020D2D3FD009A1E99 /* ArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		22FD5D4C20D4C7C200CE9373 /* KrungthaiFast-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-Italic.ttf"; sourceTree = "<group>"; };
+		22FD5D4D20D4C7C200CE9373 /* KrungthaiFast-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-Bold.ttf"; sourceTree = "<group>"; };
+		22FD5D4E20D4C7C200CE9373 /* KrungthaiFast-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-LightItalic.ttf"; sourceTree = "<group>"; };
+		22FD5D4F20D4C7C200CE9373 /* KrungthaiFast-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-UltraLight.ttf"; sourceTree = "<group>"; };
+		22FD5D5020D4C7C200CE9373 /* KrungthaiFast-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-BoldItalic.ttf"; sourceTree = "<group>"; };
+		22FD5D5120D4C7C200CE9373 /* KrungthaiFast-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-Light.ttf"; sourceTree = "<group>"; };
+		22FD5D5220D4C7C200CE9373 /* KrungthaiFast-UltraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-UltraLightItalic.ttf"; sourceTree = "<group>"; };
+		22FD5D5320D4C7C200CE9373 /* KrungthaiFast-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KrungthaiFast-Regular.ttf"; sourceTree = "<group>"; };
 		59D5782A7CBE3F0CC1D937DB /* libPods-chaipenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chaipenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5FDE6B42F243D6C5F77FAD /* Pods-chaipenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaipenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chaipenUITests/Pods-chaipenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8588A15D022223EAC6D10A52 /* Pods-chaipenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaipenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chaipenUITests/Pods-chaipenUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 				2258FC7120C3BD7100D19FDA /* Info.plist */,
 				2258FC7220C3BD7100D19FDA /* main.m */,
 				2258FC9520C3BDEF00D19FDA /* GoogleService-Info.plist */,
+				22FD5D4A20D4C72000CE9373 /* Support Files */,
 			);
 			path = chaipen;
 			sourceTree = "<group>";
@@ -197,6 +214,29 @@
 				2298C1D020D2D3FD009A1E99 /* ArticleViewController.m */,
 			);
 			path = Article;
+			sourceTree = "<group>";
+		};
+		22FD5D4A20D4C72000CE9373 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				22FD5D4B20D4C72D00CE9373 /* Fonts */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		22FD5D4B20D4C72D00CE9373 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				22FD5D4D20D4C7C200CE9373 /* KrungthaiFast-Bold.ttf */,
+				22FD5D5020D4C7C200CE9373 /* KrungthaiFast-BoldItalic.ttf */,
+				22FD5D4C20D4C7C200CE9373 /* KrungthaiFast-Italic.ttf */,
+				22FD5D5120D4C7C200CE9373 /* KrungthaiFast-Light.ttf */,
+				22FD5D4E20D4C7C200CE9373 /* KrungthaiFast-LightItalic.ttf */,
+				22FD5D5320D4C7C200CE9373 /* KrungthaiFast-Regular.ttf */,
+				22FD5D4F20D4C7C200CE9373 /* KrungthaiFast-UltraLight.ttf */,
+				22FD5D5220D4C7C200CE9373 /* KrungthaiFast-UltraLightItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AF9B00ADF83C257F49EAE900 /* Pods */ = {
@@ -324,10 +364,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FD5D5720D4C7C200CE9373 /* KrungthaiFast-UltraLight.ttf in Resources */,
+				22FD5D5420D4C7C200CE9373 /* KrungthaiFast-Italic.ttf in Resources */,
 				2258FC7020C3BD7100D19FDA /* LaunchScreen.storyboard in Resources */,
+				22FD5D5A20D4C7C200CE9373 /* KrungthaiFast-UltraLightItalic.ttf in Resources */,
+				22FD5D5920D4C7C200CE9373 /* KrungthaiFast-Light.ttf in Resources */,
 				2258FC9620C3BDEF00D19FDA /* GoogleService-Info.plist in Resources */,
 				2258FC6D20C3BD7100D19FDA /* Assets.xcassets in Resources */,
 				2258FC6B20C3BD7000D19FDA /* Main.storyboard in Resources */,
+				22FD5D5520D4C7C200CE9373 /* KrungthaiFast-Bold.ttf in Resources */,
+				22FD5D5620D4C7C200CE9373 /* KrungthaiFast-LightItalic.ttf in Resources */,
+				22FD5D5820D4C7C200CE9373 /* KrungthaiFast-BoldItalic.ttf in Resources */,
+				22FD5D5B20D4C7C200CE9373 /* KrungthaiFast-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
