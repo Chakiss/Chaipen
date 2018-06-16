@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "OnboardingViewController.h"
+
+@import Firebase;
 
 @interface AppDelegate ()
 
@@ -16,7 +19,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [FIRApp configure];
+    
+    if ([FIRAuth auth].currentUser) {
+        // User is signed in.
+        // ...
+        NSLog(@"User is signed in.");
+    
+        UITabBarController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.window.rootViewController = onboardingViewController;
+        
+    } else {
+        // No user is signed in.
+        // ...
+        NSLog(@"No user is signed in.");
+    
+        OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
+        self.window.rootViewController = onboardingViewController;
+    }
+    
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
