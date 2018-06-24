@@ -8,7 +8,14 @@
 
 #import "ArticleViewController.h"
 
-@interface ArticleViewController ()
+@import Firebase;
+
+@interface ArticleViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) FIRFirestore *defaultFirestore;
+@property (nonatomic, strong) NSArray *documentArray;
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,13 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.defaultFirestore = [FIRFirestore firestore];
     // Do any additional setup after loading the view.
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    NSLog(@"ArticleViewController viewWillAppear");
+    [[self.defaultFirestore collectionWithPath:POSTS]
+     getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+         if (error != nil) {
+             NSLog(@"Error getting documents: %@", error);
+         } else {
+             for (FIRDocumentSnapshot *document in snapshot.documents) {
+                 NSLog(@"%@ => %@", document.documentID, document.data);
+             }
+         }
+     }];
+    
+    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

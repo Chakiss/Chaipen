@@ -8,6 +8,9 @@ target 'chaipen' do
   # Pods for chaipen
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'SVProgressHUD'
+  
   pod 'AFNetworking', '~> 3.0'
 
   

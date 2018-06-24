@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OnboardingViewController.h"
+#import "CustomTabbarController.h"
 
 @import Firebase;
 
@@ -22,27 +23,63 @@
     
     [FIRApp configure];
     
-    /*
+    //FIRFirestore *defaultFirestore = [FIRFirestore firestore];
+    
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"] forBarMetrics:UIBarMetricsDefault];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"KrungthaiFast-Bold" size:21.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
     if ([FIRAuth auth].currentUser) {
         // User is signed in.
         // ...
         NSLog(@"User is signed in.");
     
-        UITabBarController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
-        self.window.rootViewController = onboardingViewController;
+        CustomTabbarController *customTabbarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.window.rootViewController = customTabbarController;
         
     } else {
         // No user is signed in.
         // ...
         NSLog(@"No user is signed in.");
     
+        [[FIRAuth auth] signInAnonymouslyAndRetrieveDataWithCompletion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+            FIRUser *user = authResult.user;
+            NSString *uid = user.uid;
+            
+            [[FIRFirestore firestore].settings setTimestampsInSnapshotsEnabled:YES];
+            
+            [[[[FIRFirestore firestore] collectionWithPath:USER] documentWithPath:uid] setData:@{
+                                                                                                 FIRSTNAME : @"",
+                                                                                                 LASTNAME : @"",
+                                                                                                 GENDOR : @"",
+                                                                                                 AGE : @"",
+                                                                                                 CREATED : [NSDate date],
+                                                                                                 UPDATED : [NSDate date]
+                                                                                                 
+                                                                                                 } completion:^(NSError * _Nullable error) {
+                                                                                                     
+                                                                                                 }];
+            
+        }];
+        
         OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
         self.window.rootViewController = onboardingViewController;
     }
-    */
     
-    OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
-    self.window.rootViewController = onboardingViewController;
+    
+   
+   
     
     [self.window makeKeyAndVisible];
     

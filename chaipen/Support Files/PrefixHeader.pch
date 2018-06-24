@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  chaipen
+//
+//  Created by Chakrit on 24/6/2561 BE.
+//  Copyright © 2561 cjworkx. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+#define USER @"users"
+#define FIRSTNAME @"first_name"
+#define LASTNAME @"last_name"
+#define GENDOR @"gender"
+#define AGE @"age"
+#define CREATED @"created"
+#define UPDATED @"updated"
+
+#define USER_TYPES @"user_types"
+
+#define CATEGORY @"category"
+#define TITLE @"title"
+
+#define POSTS @"posts"
+
+
+
+
+
+
+#import <SVProgressHUD/SVProgressHUD.h>
+
+
+#endif /* PrefixHeader_pch */
