@@ -18,6 +18,7 @@
 		2258FC9620C3BDEF00D19FDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC9520C3BDEF00D19FDA /* GoogleService-Info.plist */; };
 		2298C1CD20D2C5FA009A1E99 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2298C1CC20D2C5FA009A1E99 /* OnboardingViewController.m */; };
 		2298C1D120D2D3FD009A1E99 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2298C1D020D2D3FD009A1E99 /* ArticleViewController.m */; };
+		22B8A6D220E1296400D972CD /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B8A6D120E1296400D972CD /* ArticleTableViewCell.m */; };
 		22EF444520DE1B3300B033D3 /* CustomTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF444420DE1B3300B033D3 /* CustomTabbarController.m */; };
 		22EF444820DE468000B033D3 /* ToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF444720DE468000B033D3 /* ToggleButton.m */; };
 		22FD5D5420D4C7C200CE9373 /* KrungthaiFast-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22FD5D4C20D4C7C200CE9373 /* KrungthaiFast-Italic.ttf */; };
@@ -74,6 +75,8 @@
 		2298C1CC20D2C5FA009A1E99 /* OnboardingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		2298C1CF20D2D3FD009A1E99 /* ArticleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		2298C1D020D2D3FD009A1E99 /* ArticleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		22B8A6D020E1296400D972CD /* ArticleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
+		22B8A6D120E1296400D972CD /* ArticleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleTableViewCell.m; sourceTree = "<group>"; };
 		22EF444320DE1B3300B033D3 /* CustomTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabbarController.h; sourceTree = "<group>"; };
 		22EF444420DE1B3300B033D3 /* CustomTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarController.m; sourceTree = "<group>"; };
 		22EF444620DE468000B033D3 /* ToggleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToggleButton.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 			children = (
 				2241A3CC20DFDFAA002D38FA /* CategoryCollectionViewCell.h */,
 				2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */,
+				22B8A6D020E1296400D972CD /* ArticleTableViewCell.h */,
+				22B8A6D120E1296400D972CD /* ArticleTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,8 +181,8 @@
 				2258FC6920C3BD7000D19FDA /* Main.storyboard */,
 				2258FC6C20C3BD7100D19FDA /* Assets.xcassets */,
 				2258FC6E20C3BD7100D19FDA /* LaunchScreen.storyboard */,
-				2258FC7120C3BD7100D19FDA /* Info.plist */,
 				2258FC7220C3BD7100D19FDA /* main.m */,
+				2258FC7120C3BD7100D19FDA /* Info.plist */,
 				2258FC9520C3BDEF00D19FDA /* GoogleService-Info.plist */,
 				22FD5D4A20D4C72000CE9373 /* Support Files */,
 			);
@@ -585,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B8A6D220E1296400D972CD /* ArticleTableViewCell.m in Sources */,
 				2258FC7320C3BD7100D19FDA /* main.m in Sources */,
 				2298C1D120D2D3FD009A1E99 /* ArticleViewController.m in Sources */,
 				2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */,
@@ -762,10 +768,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 723XZA35JD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chaipen/Support Files/PrefixHeader.pch";
 				INFOPLIST_FILE = chaipen/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,10 +788,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 723XZA35JD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "chaipen/Support Files/PrefixHeader.pch";
 				INFOPLIST_FILE = chaipen/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -795,7 +809,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = chaipenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -810,7 +828,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = chaipenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -824,7 +846,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = chaipenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -838,7 +864,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = chaipenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjworkx.chaipenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

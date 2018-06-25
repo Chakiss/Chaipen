@@ -25,13 +25,15 @@
 #define TITLE @"title"
 
 #define POSTS @"posts"
-
+#define EXCERPT @"excerpt"
+#define COVER @"cover"
 
 
 
 
 
 #import <SVProgressHUD/SVProgressHUD.h>
-
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 #endif /* PrefixHeader_pch */

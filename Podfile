@@ -9,10 +9,13 @@ target 'chaipen' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  
   pod 'SVProgressHUD'
   
   pod 'AFNetworking', '~> 3.0'
 
+  pod 'JCTagListView', '1.0.2'
   
   target 'chaipenTests' do
     inherit! :search_paths

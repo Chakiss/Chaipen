@@ -7,13 +7,17 @@
 //
 
 #import "ArticleViewController.h"
+#import "ArticleTableViewCell.h"
+
 
 @import Firebase;
+@import FirebaseStorage;
 
 @interface ArticleViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) FIRFirestore *defaultFirestore;
-@property (nonatomic, strong) NSArray *documentArray;
+@property (nonatomic, strong) NSMutableArray *documentArray;
+@property (nonatomic, strong) NSMutableArray *userTypesArray;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
@@ -25,40 +29,121 @@
     [super viewDidLoad];
     
     self.defaultFirestore = [FIRFirestore firestore];
-    // Do any additional setup after loading the view.
-   
+    
+    self.userTypesArray = [NSMutableArray array];
+    self.documentArray = [NSMutableArray array];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    [[self.defaultFirestore collectionWithPath:POSTS]
-     getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
-         if (error != nil) {
-             NSLog(@"Error getting documents: %@", error);
-         } else {
-             for (FIRDocumentSnapshot *document in snapshot.documents) {
-                 NSLog(@"%@ => %@", document.documentID, document.data);
-             }
-         }
-     }];
+    [[self.defaultFirestore collectionWithPath:USER_TYPES] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        for (id user_types in snapshot.documents) {
+            [self.userTypesArray addObject:user_types];
+        }
+        
+    }];
     
     
+    
+    
+    [SVProgressHUD show];
+    FIRDocumentReference *docRef =
+    [[self.defaultFirestore collectionWithPath:USER] documentWithPath:[FIRAuth auth].currentUser.uid];
+    [docRef getDocumentWithCompletion:^(FIRDocumentSnapshot *snapshot, NSError *error) {
+        if (snapshot.exists) {
+            
+//            for (id user_types in snapshot.data[USER_TYPES] ) {
+//                //NSLog(@"%@",[NSString stringWithFormat:@"%@.%@",USER_TYPES,user_types]);
+//                [self.userTypesArray addObject:user_types];
+//            }
+            
+            [[self.defaultFirestore collectionWithPath:POSTS] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+                self.documentArray = (NSMutableArray *)snapshot.documents;
+                [self.tableView reloadData];
+                [SVProgressHUD dismiss];
+            }];
+            
+            
+        } else {
+            NSLog(@"Document does not exist");
+            [SVProgressHUD dismiss];
+        }
+    }];
+    
+     
 
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.documentArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ArticleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ArticleTableViewCell"];
+    
+    FIRQueryDocumentSnapshot *data = self.documentArray[indexPath.row];
+    
+    cell.titleLabel.text = data[TITLE];
+    cell.descriptionLabel.text = data[EXCERPT];
+    
+    FIRStorageReference *storageRef = [[FIRStorage storage] reference];
+    FIRStorageReference *imagesRef = [storageRef child:@"images/posts"];
+    NSString *fileName = data[COVER];
+    imagesRef = [imagesRef child:[[fileName componentsSeparatedByString:@"/"] lastObject]];
+
+    [imagesRef dataWithMaxSize:5000000 completion:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            UIImage *image = [UIImage imageWithData: data];
+            cell.articleImageView.image = image;
+        }
+    }];
+    
+    cell.tagListView.canSelectTags = NO;
+    cell.tagListView.tagSelectedTextColor = [UIColor blackColor];
+    cell.tagListView.tagCornerRadius = 5.0f;
+    cell.tagListView.tagTextFont = [UIFont fontWithName:@"KrungthaiFast-LightItalic" size:14.0];
+    [cell.tagListView.tags addObjectsFromArray:[self getTypeString:data[USER_TYPES]]];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+}
+
+- (NSArray *)getTypeString:(NSDictionary *)data {
+    NSMutableArray *returnArray = [NSMutableArray array];
+    for (NSString* key in data) {
+        id value = data[key];
+        NSLog(@"value = %@",value);
+        if ([value boolValue]) {
+            NSLog(@"KEY = %@",key);
+            for (id type in self.userTypesArray) {
+                FIRQueryDocumentSnapshot *data = type;
+                if ([data.documentID isEqualToString:key]) {
+                    NSLog(@"XXXX == %@",data[TITLE]);
+                    [returnArray addObject:data[TITLE]];
+                }
+                
+            }
+        }
+    }
+    
+    return returnArray;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

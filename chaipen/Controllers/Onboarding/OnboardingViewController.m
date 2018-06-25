@@ -157,7 +157,7 @@
             self.ageUpper45Button.toggleIsOn = NO;
             [self.ageUpper45Button setImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
         } else {
-            self.age = @"26-45";
+            self.age = @"45upper";
             self.ageLower18Button.toggleIsOn = NO;
             self.age1825Button.toggleIsOn = NO;
             self.age2645Button.toggleIsOn = NO;
