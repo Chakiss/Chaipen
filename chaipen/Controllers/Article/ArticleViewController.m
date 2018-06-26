@@ -8,12 +8,14 @@
 
 #import "ArticleViewController.h"
 #import "ArticleTableViewCell.h"
-
+#import "DetailViewController.h"
 
 @import Firebase;
 @import FirebaseStorage;
 
-@interface ArticleViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ArticleViewController () <UITableViewDelegate, UITableViewDataSource> {
+    UIRefreshControl *refreshControl;
+}
 
 @property (nonatomic, strong) FIRFirestore *defaultFirestore;
 @property (nonatomic, strong) NSMutableArray *documentArray;
@@ -33,35 +35,39 @@
     self.userTypesArray = [NSMutableArray array];
     self.documentArray = [NSMutableArray array];
     
+    refreshControl = [[UIRefreshControl alloc]init];
+    [self.tableView addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    
+    if (MAX([[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height) == 812.0) {
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"]
+                                           forBarMetrics:UIBarMetricsDefault];
+        
+    }
+    else
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"]
+                                           forBarMetrics:UIBarMetricsDefault];
+    
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    
-    [[self.defaultFirestore collectionWithPath:USER_TYPES] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-        for (id user_types in snapshot.documents) {
-            [self.userTypesArray addObject:user_types];
-        }
-        
-    }];
-    
-    
-    
-    
+- (void)refresh {
+
+    [refreshControl endRefreshing];
     [SVProgressHUD show];
     FIRDocumentReference *docRef =
     [[self.defaultFirestore collectionWithPath:USER] documentWithPath:[FIRAuth auth].currentUser.uid];
     [docRef getDocumentWithCompletion:^(FIRDocumentSnapshot *snapshot, NSError *error) {
         if (snapshot.exists) {
             
-//            for (id user_types in snapshot.data[USER_TYPES] ) {
-//                //NSLog(@"%@",[NSString stringWithFormat:@"%@.%@",USER_TYPES,user_types]);
-//                [self.userTypesArray addObject:user_types];
-//            }
+            //            for (id user_types in snapshot.data[USER_TYPES] ) {
+            //                //NSLog(@"%@",[NSString stringWithFormat:@"%@.%@",USER_TYPES,user_types]);
+            //                [self.userTypesArray addObject:user_types];
+            //            }
             
             [[self.defaultFirestore collectionWithPath:POSTS] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
                 self.documentArray = (NSMutableArray *)snapshot.documents;
                 [self.tableView reloadData];
+                
                 [SVProgressHUD dismiss];
             }];
             
@@ -72,6 +78,18 @@
         }
     }];
     
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [[self.defaultFirestore collectionWithPath:USER_TYPES] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        for (id user_types in snapshot.documents) {
+            [self.userTypesArray addObject:user_types];
+        }
+        
+    }];
+    
+    [self refresh];
      
 
 }
@@ -114,20 +132,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- 
+    FIRQueryDocumentSnapshot *data = self.documentArray[indexPath.row];
+    
+    [[[self.defaultFirestore collectionWithPath:POSTS] documentWithPath:data.documentID] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewController"];
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }];
 }
 
 - (NSArray *)getTypeString:(NSDictionary *)data {
     NSMutableArray *returnArray = [NSMutableArray array];
     for (NSString* key in data) {
         id value = data[key];
-        NSLog(@"value = %@",value);
         if ([value boolValue]) {
-            NSLog(@"KEY = %@",key);
             for (id type in self.userTypesArray) {
                 FIRQueryDocumentSnapshot *data = type;
                 if ([data.documentID isEqualToString:key]) {
-                    NSLog(@"XXXX == %@",data[TITLE]);
                     [returnArray addObject:data[TITLE]];
                 }
                 

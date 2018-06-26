@@ -304,7 +304,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="9DQ-N5-Z8C" kind="relationship" relationship="viewControllers" id="g1y-wa-RrQ"/>
-                        <segue destination="ydU-w3-R3t" kind="relationship" relationship="viewControllers" id="raq-Bo-gdr"/>
                         <segue destination="d3o-l9-NKx" kind="relationship" relationship="viewControllers" id="Vo5-kL-gU7"/>
                     </connections>
                 </tabBarController>
@@ -469,6 +468,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIG-BZ-6B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1652" y="311.08374384236453"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="06L-Ix-FEn">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Pgt-0p-jmx" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qd2-YB-rlw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="k0C-qN-fwj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6C-4x-4po" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2780" y="311"/>
         </scene>
         <!--บทความ-->
         <scene sceneID="LYj-UX-1p0">

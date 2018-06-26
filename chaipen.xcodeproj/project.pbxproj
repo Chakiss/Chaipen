@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2241A3CE20DFDFAA002D38FA /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */; };
+		2256088920E1F55200F39918 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256088820E1F55200F39918 /* DetailViewController.m */; };
 		2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC6420C3BD7000D19FDA /* AppDelegate.m */; };
 		2258FC6B20C3BD7000D19FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC6920C3BD7000D19FDA /* Main.storyboard */; };
 		2258FC6D20C3BD7100D19FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2258FC6C20C3BD7100D19FDA /* Assets.xcassets */; };
@@ -56,6 +57,8 @@
 		2241A3CA20DFC286002D38FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2241A3CC20DFDFAA002D38FA /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		2256088720E1F55200F39918 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2256088820E1F55200F39918 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		2258FC6020C3BD7000D19FDA /* chaipen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaipen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2258FC6320C3BD7000D19FDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2258FC6420C3BD7000D19FDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +151,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2256088620E1F52200F39918 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2256088720E1F55200F39918 /* DetailViewController.h */,
+				2256088820E1F55200F39918 /* DetailViewController.m */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
 		2258FC5720C3BD7000D19FDA = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +225,7 @@
 				22EF444220DE19E800B033D3 /* Custom */,
 				2298C1CA20D2C5D3009A1E99 /* Onboarding */,
 				2298C1CE20D2CCCE009A1E99 /* Article */,
+				2256088620E1F52200F39918 /* ArticleDetail */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -592,6 +605,7 @@
 			files = (
 				22B8A6D220E1296400D972CD /* ArticleTableViewCell.m in Sources */,
 				2258FC7320C3BD7100D19FDA /* main.m in Sources */,
+				2256088920E1F55200F39918 /* DetailViewController.m in Sources */,
 				2298C1D120D2D3FD009A1E99 /* ArticleViewController.m in Sources */,
 				2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */,
 				22EF444820DE468000B033D3 /* ToggleButton.m in Sources */,
