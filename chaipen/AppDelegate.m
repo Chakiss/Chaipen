@@ -71,14 +71,13 @@
                                                                                                  }];
             
         }];
-        
-        OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
+     
+        OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController2"];
         self.window.rootViewController = onboardingViewController;
     }
     
     
-   
-   
+ 
     
     [self.window makeKeyAndVisible];
     

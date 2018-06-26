@@ -22,11 +22,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
+    /*
     NSLog(@"CustomTabbarController viewWillAppear");
     [self.tabBar.items[1] setImage:[UIImage imageNamed:@"pocket"]];
     UITabBarItem *centerTab = self.tabBar.items[1];
     centerTab.image = [[UIImage imageNamed:@"pocket"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     centerTab.selectedImage = [[UIImage imageNamed:@"pocket_active"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+     */
 }
 
 - (void)didReceiveMemoryWarning {

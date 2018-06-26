@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,31 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-6i-xD0">
-                                <rect key="frame" x="0.0" y="145" width="375" height="397"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-6i-xD0">
+                                <rect key="frame" x="0.0" y="212.66666666666663" width="375" height="397"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="397" id="iaO-az-gus"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="P48-xH-8U3">
+                                <rect key="frame" x="67" y="730" width="240" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="6Fj-Ub-ug6"/>
+                                    <constraint firstAttribute="width" constant="240" id="qoG-Jn-PQ3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.17647058823529413" green="0.69803921568627447" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.65490196078431373" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h5A-6i-xD0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="13P-3k-Vc8"/>
                             <constraint firstItem="h5A-6i-xD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QoO-hT-UeW"/>
+                            <constraint firstItem="P48-xH-8U3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XJZ-hL-wnB"/>
                             <constraint firstAttribute="trailing" secondItem="h5A-6i-xD0" secondAttribute="trailing" id="a7r-CN-hSU"/>
                             <constraint firstItem="h5A-6i-xD0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hZb-LP-gvK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P48-xH-8U3" secondAttribute="bottom" constant="20" id="tgn-Io-OOj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bitmap" width="144" height="28"/>
         <image name="iTunesArtwork" width="512" height="512"/>
     </resources>
 </document>

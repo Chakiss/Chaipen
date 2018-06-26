@@ -27,6 +27,7 @@
 #define POSTS @"posts"
 #define EXCERPT @"excerpt"
 #define COVER @"cover"
+#define CONTENT @"content"
 
 
 

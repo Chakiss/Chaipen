@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2216BF8620E27CF400ADFF27 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2216BF8520E27CF400ADFF27 /* DetailTableViewCell.m */; };
+		2216BF8A20E2880700ADFF27 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2216BF8920E2880700ADFF27 /* ProfileViewController.m */; };
 		2241A3CE20DFDFAA002D38FA /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */; };
 		2256088920E1F55200F39918 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256088820E1F55200F39918 /* DetailViewController.m */; };
 		2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258FC6420C3BD7000D19FDA /* AppDelegate.m */; };
@@ -54,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		10F8D37EE64DD3C686B4811A /* Pods-chaipenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaipenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chaipenTests/Pods-chaipenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2216BF8420E27CF400ADFF27 /* DetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		2216BF8520E27CF400ADFF27 /* DetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		2216BF8820E2880700ADFF27 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2216BF8920E2880700ADFF27 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		2241A3CA20DFC286002D38FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2241A3CC20DFDFAA002D38FA /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
@@ -140,6 +146,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2216BF8720E2878400ADFF27 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2216BF8820E2880700ADFF27 /* ProfileViewController.h */,
+				2216BF8920E2880700ADFF27 /* ProfileViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2241A3CB20DFDF8F002D38FA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +162,8 @@
 				2241A3CD20DFDFAA002D38FA /* CategoryCollectionViewCell.m */,
 				22B8A6D020E1296400D972CD /* ArticleTableViewCell.h */,
 				22B8A6D120E1296400D972CD /* ArticleTableViewCell.m */,
+				2216BF8420E27CF400ADFF27 /* DetailTableViewCell.h */,
+				2216BF8520E27CF400ADFF27 /* DetailTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +243,7 @@
 				2298C1CA20D2C5D3009A1E99 /* Onboarding */,
 				2298C1CE20D2CCCE009A1E99 /* Article */,
 				2256088620E1F52200F39918 /* ArticleDetail */,
+				2216BF8720E2878400ADFF27 /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -609,7 +627,9 @@
 				2298C1D120D2D3FD009A1E99 /* ArticleViewController.m in Sources */,
 				2258FC6520C3BD7000D19FDA /* AppDelegate.m in Sources */,
 				22EF444820DE468000B033D3 /* ToggleButton.m in Sources */,
+				2216BF8620E27CF400ADFF27 /* DetailTableViewCell.m in Sources */,
 				2241A3CE20DFDFAA002D38FA /* CategoryCollectionViewCell.m in Sources */,
+				2216BF8A20E2880700ADFF27 /* ProfileViewController.m in Sources */,
 				2298C1CD20D2C5FA009A1E99 /* OnboardingViewController.m in Sources */,
 				22EF444520DE1B3300B033D3 /* CustomTabbarController.m in Sources */,
 			);

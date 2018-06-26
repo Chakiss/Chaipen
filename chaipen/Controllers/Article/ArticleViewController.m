@@ -38,15 +38,9 @@
     refreshControl = [[UIRefreshControl alloc]init];
     [self.tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+
     
-    if (MAX([[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height) == 812.0) {
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"]
-                                           forBarMetrics:UIBarMetricsDefault];
-        
-    }
-    else
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar"]
-                                           forBarMetrics:UIBarMetricsDefault];
+    [self refresh];
     
 }
 
@@ -54,23 +48,40 @@
 
     [refreshControl endRefreshing];
     [SVProgressHUD show];
+    
     FIRDocumentReference *docRef =
     [[self.defaultFirestore collectionWithPath:USER] documentWithPath:[FIRAuth auth].currentUser.uid];
-    [docRef getDocumentWithCompletion:^(FIRDocumentSnapshot *snapshot, NSError *error) {
-        if (snapshot.exists) {
+    [docRef getDocumentWithCompletion:^(FIRDocumentSnapshot *snapshotUser, NSError *error) {
+        if (snapshotUser.exists) {
             
-            //            for (id user_types in snapshot.data[USER_TYPES] ) {
-            //                //NSLog(@"%@",[NSString stringWithFormat:@"%@.%@",USER_TYPES,user_types]);
-            //                [self.userTypesArray addObject:user_types];
-            //            }
-            
-            [[self.defaultFirestore collectionWithPath:POSTS] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-                self.documentArray = (NSMutableArray *)snapshot.documents;
-                [self.tableView reloadData];
+            [[self.defaultFirestore collectionWithPath:USER_TYPES] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshotUserTypes, NSError * _Nullable error) {
+                for (id user_types in snapshotUserTypes.documents) {
+                    [self.userTypesArray addObject:user_types];
+                }
                 
-                [SVProgressHUD dismiss];
+                
+                [[self.defaultFirestore collectionWithPath:POSTS] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshotPosts, NSError * _Nullable error) {
+                    
+                   self.documentArray = [NSMutableArray array];
+                    for (FIRQueryDocumentSnapshot *document in snapshotPosts.documents) {
+                        NSLog(@"document == %@",document.data[USER_TYPES]);
+                        for (NSString* key in document.data[USER_TYPES]) {
+                            id value = document.data[USER_TYPES][key];
+                            if ([value boolValue]) {
+                                NSLog(@"value = %@",value);
+                                [self.documentArray addObject:document];
+                                break;
+                            }
+                        }
+                    }
+                    
+                    
+                    [self.tableView reloadData];
+                    
+                    [SVProgressHUD dismiss];
+                }];
+                
             }];
-            
             
         } else {
             NSLog(@"Document does not exist");
@@ -81,15 +92,12 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.tabBarController.tabBar setHidden:NO];
     
-    [[self.defaultFirestore collectionWithPath:USER_TYPES] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-        for (id user_types in snapshot.documents) {
-            [self.userTypesArray addObject:user_types];
-        }
-        
-    }];
+   
     
-    [self refresh];
+   
      
 
 }
@@ -136,6 +144,7 @@
     
     [[[self.defaultFirestore collectionWithPath:POSTS] documentWithPath:data.documentID] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error) {
         DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewController"];
+        detailViewController.data = data;
         [self.navigationController pushViewController:detailViewController animated:YES];
     }];
 }
