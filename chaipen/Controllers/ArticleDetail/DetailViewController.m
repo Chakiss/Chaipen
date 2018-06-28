@@ -27,6 +27,8 @@
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.tabBarController.tabBar setHidden:YES];
+    self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -54,6 +56,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     NSString *identifier = @"DetailTableViewCell";
     if (indexPath.row == 1) {
         identifier = @"DetailTableViewCell1";

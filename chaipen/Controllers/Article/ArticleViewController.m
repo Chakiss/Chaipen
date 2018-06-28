@@ -96,7 +96,7 @@
     [self.tabBarController.tabBar setHidden:NO];
     
    
-    
+    NSLog(@"USER ID = %@",[FIRAuth auth].currentUser.uid);
    
      
 
