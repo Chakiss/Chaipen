@@ -38,6 +38,10 @@
                                                            [UIFont fontWithName:@"KrungthaiFast-Bold" size:21.0], NSFontAttributeName, nil]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont fontWithName:@"KrungthaiFast-Bold" size:13.0f]
+                                                        } forState:UIControlStateNormal];
+    
     
     if ([FIRAuth auth].currentUser) {
         // User is signed in.
@@ -72,7 +76,7 @@
             
         }];
      
-        OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController2"];
+        OnboardingViewController *onboardingViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"OnboardingViewController"];
         self.window.rootViewController = onboardingViewController;
     }
     

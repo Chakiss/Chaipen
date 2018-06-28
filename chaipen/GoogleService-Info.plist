@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>724165166781-a2hd40sh28lrq2pdoq2lchujpk8hc31q.apps.googleusercontent.com</string>
+	<string>724165166781-bjb185hi44ebou4n2h0fggjiu72ean55.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.724165166781-a2hd40sh28lrq2pdoq2lchujpk8hc31q</string>
+	<string>com.googleusercontent.apps.724165166781-bjb185hi44ebou4n2h0fggjiu72ean55</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAzKZ9GDS1QX0ngkhIsbzrl5uapdQ7DcUw</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.cjworkx.chaipen</string>
+	<string>com.ktb.chaipen</string>
 	<key>PROJECT_ID</key>
 	<string>chaipen-b67e4</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:724165166781:ios:a1a1e72e2cb8c0b2</string>
+	<string>1:724165166781:ios:6f8682a9724aba5a</string>
 	<key>DATABASE_URL</key>
 	<string>https://chaipen-b67e4.firebaseio.com</string>
 </dict>

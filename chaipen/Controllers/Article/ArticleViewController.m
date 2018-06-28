@@ -102,6 +102,9 @@
 
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.documentArray.count;
@@ -135,7 +138,7 @@
     cell.tagListView.tagCornerRadius = 5.0f;
     cell.tagListView.tagTextFont = [UIFont fontWithName:@"KrungthaiFast-LightItalic" size:14.0];
     [cell.tagListView.tags addObjectsFromArray:[self getTypeString:data[USER_TYPES]]];
-
+    [cell layoutIfNeeded];
     return cell;
 }
 
@@ -159,7 +162,6 @@
                 if ([data.documentID isEqualToString:key]) {
                     [returnArray addObject:data[TITLE]];
                 }
-                
             }
         }
     }

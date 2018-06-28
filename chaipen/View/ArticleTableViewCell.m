@@ -21,4 +21,11 @@
     self.shadowView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.shadowView.bounds].CGPath;
 }
 
+- (void)layoutIfNeeded {
+    self.tagListHeight.constant = 50;
+    if (self.tagListView.tags.count > 4) {
+        self.tagListHeight.constant += 40;
+    }
+}
+
 @end

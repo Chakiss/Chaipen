@@ -19,4 +19,6 @@
 
 @property (nonatomic, weak) IBOutlet JCTagListView *tagListView;
 
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *tagListHeight;
+
 @end

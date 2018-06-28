@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,31 +17,38 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="P48-xH-8U3">
-                                <rect key="frame" x="67" y="730" width="240" height="28"/>
+                                <rect key="frame" x="87" y="688" width="240" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="6Fj-Ub-ug6"/>
                                     <constraint firstAttribute="width" constant="240" id="qoG-Jn-PQ3"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-6i-xD0">
-                                <rect key="frame" x="0.0" y="223" width="375" height="376"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chaipen" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-4G-a36">
+                                <rect key="frame" x="41.333333333333343" y="181.66666666666669" width="331.33333333333326" height="241.66666666666669"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="376" id="758-TM-H3G"/>
-                                    <constraint firstAttribute="width" constant="375" id="EyQ-sg-Unq"/>
+                                    <constraint firstAttribute="width" secondItem="yQQ-4G-a36" secondAttribute="height" multiplier="100:73" id="E98-Xn-47k"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="i6a-nd-rDF">
+                                <rect key="frame" x="41.333333333333343" y="403.66666666666674" width="372.66666666666663" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="WnV-6K-jxF"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.65490196078431373" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h5A-6i-xD0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4IG-Cg-rg7"/>
-                            <constraint firstItem="h5A-6i-xD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QoO-hT-UeW"/>
+                            <constraint firstItem="i6a-nd-rDF" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="3kD-il-qDb"/>
+                            <constraint firstItem="yQQ-4G-a36" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I0y-1A-gVO"/>
+                            <constraint firstItem="yQQ-4G-a36" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="N3a-oO-i5R"/>
+                            <constraint firstItem="yQQ-4G-a36" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="V4o-rY-lvA"/>
                             <constraint firstItem="P48-xH-8U3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XJZ-hL-wnB"/>
-                            <constraint firstAttribute="trailing" secondItem="h5A-6i-xD0" secondAttribute="trailing" id="a7r-CN-hSU"/>
-                            <constraint firstItem="h5A-6i-xD0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hZb-LP-gvK"/>
+                            <constraint firstItem="i6a-nd-rDF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hok-KP-eCr"/>
+                            <constraint firstItem="i6a-nd-rDF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.4" id="lmF-cX-Qjc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P48-xH-8U3" secondAttribute="bottom" constant="20" id="tgn-Io-OOj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,11 +56,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
         <image name="Bitmap" width="144" height="28"/>
-        <image name="iTunesArtwork" width="512" height="512"/>
+        <image name="chaipen" width="508" height="219"/>
+        <image name="hand" width="801" height="726"/>
     </resources>
 </document>
